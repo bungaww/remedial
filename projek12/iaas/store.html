@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>B store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  
+  </head> 
+  <!-- <style>
+      button :hover{
+    box-shadow: 2px 1px 2px black;
+  }  
+  </style>  -->
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar navbar-expand-sm navbar-expand-md sticky-top" style="background-color: #F4D160;">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+         'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+        <img src="logokiri-removebg-preview.png" alt="" style="width: 30px;" class="py-0 mb-1 img-fluid"> STORE</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+        <form class="d-flex mx-auto" role="search">
+          <input class="form-control me-2 container-fluid" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+          'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" type="search" placeholder="cari barang" 
+            aria-label="Search" style="width: 350px;">
+          <button class="btn btn-outline-dark" type="submit" style="background-color: #FF8C00; font-family:'Lucida Sans', 'Lucida Sans 
+          Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">search</button>
+        </form>
+        
+        <ul class="navbar-nav ms-auto navbar-expand-lg navbar-expand-md navbar-expand-sm">
+          <li class="nav-item">
+            <a class="nav-link active container-fluid"
+            style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"
+            href="#"><i class="bi bi-cart-plus-fill"> wishlist</i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active container-fluid" aria-current="page" 
+            style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif" 
+            href="#"><i class="bi bi-person-circle"> login </i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active container-fluid" 
+            style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"
+            href="#"><i class="bi bi-bell-fill"> note</i></a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+  
+
+  <div class="header text-center text-center">
+  <div id="collapseExample" class="bg-light">
+      <nav class="navbar navbar-expand-sm p-2" style="background-color: #F4D160;">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link active" 
+              aria-current="page" href="#" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Marshwillow</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link active"
+              style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" href="#">Madamgie</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active"
+              style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif" href="#">Implora</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link active"
+              style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif" href="#">Wardah</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active"
+              style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif" href="#">Emina</a>
+            </li> 
+            <li class="nav-item dropdown">
+              <a class="nav-link active dropdown-toggle"
+              style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"
+               href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                lainnya
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif" href="#">YOU</a></li>
+               
+                <li><hr class="dropdown-divider"><a class="dropdown-item" style="font-family:'Franklin Gothic Medium', 'Arial Narrow',
+                 Arial, sans-serif" href="#">O.M.G</a></li>
+               
+                <li><hr class="dropdown-divider"><a class="dropdown-item" style="font-family:'Franklin Gothic Medium', 'Arial Narrow',
+                 Arial, sans-serif" href="#">Maybelline</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </div>
+
+  </div> 
+
+
+      <!-- carousel -->
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" 
+          aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="makeup.jpeg" class="d-block w-100 rounded-4 img-fluid" style="height:400px;" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src=" awal1.png" class="d-block w-100 rounded-4 img-fluid" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="promo.png" class="d-block w-100 rounded-4 img-fluid" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- end carousel -->
+
+      <!-- card 1--> 
+      <div class="row py-4 mx-auto justify-content-center"> 
+
+        <div class="card m-2 col-lg-2 col-md-4 col-md-6" style="width: 200px;">
+        <img src="blushon_1.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Focallure Blush On FA25</h5>
+            
+            <p class="bi bi-tags-fill mt-4">156.000 - 165.000</p> 
+            <a href="#" class="btn btn-outline-dark" style="background-color: #FF8C00;">buy</a>
+            <i class="bi bi-star-fill" style="color: yellow"></i> 
+            <i class="bi bi-star-fill" style="color: yellow"></i>
+            <i class="bi bi-star-fill" style="color: yellow"></i>
+            <i class="bi bi-star-half" style="color: yellow"></i> 
+          </div>
+        </div>
+
+        <div class="card m-2 col-lg-2 col-md-4 col-md-6" style="width: 200px;">
+          <img src="blushon_2.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">LAMEILA 5107 BLUSH ON 4</h5>
+              <p class="bi bi-tags-fill mt-4">121.000 - 135.000</p> 
+              <a href="#" class="btn btn-outline-dark" style="background-color: #FF8C00;">buy</a>
+            <i class="bi bi-star-fill" style="color: yellow"></i> 
+            <i class="bi bi-star-fill" style="color: yellow"></i>
+            <i class="bi bi-star-fill" style="color: yellow"></i>
+            <i class="bi bi-star-half" style="color: yellow"></i> 
+            </div>
+          </div>
+
+          <div class="card m-2 col-lg-2 col-md-4 col-md-6" style="width: 200px;">
+            <img src="blushon_3.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">BRASOV Blush On A4</h5>
+                <p class="bi bi-tags-fill mt-4">160.000 - 200.000</p> 
+                <a href="#" class="btn btn-outline-dark" style="background-color: #FF8C00;">buy</a>
+            <i class="bi bi-star-fill" style="color: yellow"></i> 
+            <i class="bi bi-star-fill" style="color: yellow"></i>
+            <i class="bi bi-star-fill" style="color: yellow"></i>
+            <i class="bi bi-star-half" style="color: yellow"></i> 
+                
+              </div>
+            </div>
+
+            <div class="card m-2 col-lg-2 col-md-4 col-md-6" style="width: 200px;">
+              <img src="blushon_4.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">HANASUI CHEEK BLUSH </h5>
+                  <p class="bi bi-tags-fill mt-4">170.000 - 200.000</p> 
+                  <a href="#" class="btn btn-outline-dark" style="background-color: #FF8C00;">buy</a>
+                  <i class="bi bi-star-fill" style="color: yellow"></i> 
+                  <i class="bi bi-star-fill" style="color: yellow"></i>
+                  <i class="bi bi-star-fill" style="color: yellow"></i>
+                  <i class="bi bi-star-half" style="color: yellow"></i> 
+                      
+                </div>
+              </div>
+
+              <div class="card m-2 col-lg-2 col-md-4 col-md-6" style="width: 200px;">
+                <img src="blushon_5.jpeg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Juicy Cheek 3 In 1</h5>
+                    <p class="bi bi-tags-fill mt-4">160.000 - 200.000</p> 
+                    <a href="#" class="btn btn-outline-dark" style="background-color: #FF8C00;">buy</a>
+                    <i class="bi bi-star-fill" style="color: yellow"></i> 
+                    <i class="bi bi-star-fill" style="color: yellow"></i>
+                    <i class="bi bi-star-fill" style="color: yellow"></i>
+                    <i class="bi bi-star-half" style="color: yellow"></i> 
+                        
+                  </div>
+                </div>
+
+                <div class="card m-2 col-lg-2 col-md-4 col-md-6" style="width: 200px;">
+                  <img src="blushon_6.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Candy Natural Rouge Blush</h5>
+                      <p class="bi bi-tags-fill mt-4">160.000 - 200.000</p>
+                      <a href="#" class="btn btn-outline-dark" style="background-color: #FF8C00;">buy</a>
+                      <i class="bi bi-star-fill" style="color: yellow"></i> 
+                      <i class="bi bi-star-fill" style="color: yellow"></i>
+                      <i class="bi bi-star-fill" style="color: yellow"></i>
+                      <i class="bi bi-star-half" style="color: yellow"></i> 
+                          
+                    </div>
+                  </div> 
+
+      </div>
+      <!-- end card 1 -->
+
+      <!-- card 2 -->
+      <div class="row py-4 mx-auto justify-content-center"> 
+
+        <div class="card m-2 col-lg-3 col-md-4 col-sm-6" style="width: 300px;">
+        <img src="ayeshadow_1.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Marshwillow pretty me eyeshadow </h5> 
+            <p class="bi bi-tags-fill mt-4">160.000 - 200.000</p> 
+            <a href="#" class="btn btn-outline-dark" style="background-color: #FF8C00;">buy</a>
+            <i class="bi bi-star-fill" style="color: yellow"></i> 
+            <i class="bi bi-star-fill" style="color: yellow"></i>
+            <i class="bi bi-star-fill" style="color: yellow"></i>
+            <i class="bi bi-star-half" style="color: yellow"></i> 
+                
+          </div>
+        </div>
+
+        <div class="card m-2 col-lg-3 col-md-4 col-sm-6" style="width: 300px;"> 
+        <img src="ayeshadow_2.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Lameila 5099 Eyeshadow Pinkflash</h5>
+            <p class="bi bi-tags-fill mt-4">160.000 - 200.000</p>
+            <a href="#" class="btn btn-outline-dark" style="background-color: #FF8C00;">buy</a>
+            <i class="bi bi-star-fill" style="color: yellow"></i> 
+            <i class="bi bi-star-fill" style="color: yellow"></i>
+            <i class="bi bi-star-fill" style="color: yellow"></i>
+            <i class="bi bi-star-half" style="color: yellow"></i> 
+                
+          </div>
+        </div>
+
+        <div class="card m-2 col-lg-3 col-md-4 col-sm-6" style="width: 300px;">
+        <img src="ayeshadow_3.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Pinkflash 3 Pan Eyeshadow </h5>
+            <p class="bi bi-tags-fill mt-4">160.000 - 200.000</p>
+            <a href="#" class="btn btn-outline-dark" style="background-color: #FF8C00;">buy</a>
+            <i class="bi bi-star-fill" style="color: yellow"></i> 
+            <i class="bi bi-star-fill" style="color: yellow"></i>
+            <i class="bi bi-star-fill" style="color: yellow"></i>
+            <i class="bi bi-star-half" style="color: yellow"></i> 
+                
+          </div> 
+        </div>
+
+        <div class="card m-2 col-lg-3 col-md-4 col-sm-6" style="width: 300px;">
+        <img src="ayeshadow_4.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Gietin Pro Eyeshadow Palette Pigmented</h5>
+            <p class="bi bi-tags-fill mt-4">160.000 - 200.000</p>
+            <a href="#" class="btn btn-outline-dark" style="background-color: #FF8C00;">buy</a>
+            <i class="bi bi-star-fill" style="color: yellow"></i> 
+            <i class="bi bi-star-fill" style="color: yellow"></i>
+            <i class="bi bi-star-fill" style="color: yellow"></i>
+            <i class="bi bi-star-half" style="color: yellow"></i> 
+                
+          </div> 
+        </div>
+
+      </div> 
+      <!-- end card 2 -->
+
+      <!-- card 3 -->
+      <div class="row py-4 mx-auto justify-content-center"> 
+
+        <div class="card m-2 col-lg-6 col-md-12 col-md-12" style="width: 400px;">
+        <img src="maskara_1.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">ESENSES Waterproof Volume Mascara</h5> <p class="bi bi-tags-fill mt-4">160.000 - 200.000</p> 
+            <a href="#" class="btn btn-outline-dark" style="background-color: #FF8C00;">buy</a>
+            <i class="bi bi-star-fill" style="color: yellow"></i> 
+            <i class="bi bi-star-fill" style="color: yellow"></i>
+            <i class="bi bi-star-fill" style="color: yellow"></i>
+            <i class="bi bi-star-half" style="color: yellow"></i> 
+                
+          </div>
+        </div> 
+
+        <div class="card m-2 col-lg-2 col-md-12 col-md-12" style="width: 400px;"> 
+        <img src="maskara_2.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+             <h5 class="card-title">Maybelline The Colossal Waterproof Mascara</h5>
+             <p class="bi bi-tags-fill mt-4">160.000 - 200.000</p>
+             <a href="#" class="btn btn-outline-dark" style="background-color: #FF8C00;">buy</a>
+             <i class="bi bi-star-fill" style="color: yellow"></i> 
+             <i class="bi bi-star-fill" style="color: yellow"></i>
+             <i class="bi bi-star-fill" style="color: yellow"></i>
+             <i class="bi bi-star-half" style="color: yellow"></i> 
+             
+          </div>
+        </div> 
+
+
+
+
+      </div>  
+
+
+      <!-- end card 3 -->
+
+      <!-- footer --> 
+
+  <div class="" style="background-color: #F4D160";>
+    <div class="container justify-content-center">
+
+      <div class="row"> 
+        <div class="col-lg-3 col-md-6 col-sm-6 p-3">
+          <p class="mb-2">
+
+            <ul type="none">
+              <li><b>Layanan Pelanggan</b></li>
+              <li>Bantuan</li>
+              <li>Metode Pembayaran</li>
+              <li>ShopeePay</li>
+              <li>Koin Shopee</li>
+              <li>Lacak Pesanan Pembeli</li>
+              <li>Lacak Pengiriman Penjual</li>
+              <li>Gratis Ongkir</li>
+              <li>Pengembalian Barang & Dana</li>
+              <li>Garansi Shopee</li>
+              <li>Hubungi Kami</li> 
+            </ul> 
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-6 p-3">
+          <p class="mb-2">
+            <ul type="none">
+              <li><b>Jelajahi Toko Kami</b></li>
+              <li>Tentang Kami</li>
+              <li>Karir</li>
+              <li>Kebijakan Shopee</li>
+              <li>Kebijakan Privasi</li>
+              <li>Blog</li>
+              <li>Shopee Mall</li>
+              <li>Seller Centre</li>
+              <li>Flash Sale</li>
+              <li>Kontak Media</li>
+              <li>Shopee Affiliate</li> 
+            </ul> 
+          </p> 
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-6 p-3">
+          <ul type="none">
+            <p><b>Ikuti Kami :</b></p>
+              <li><i class="bi bi-facebook p-2"> facebook</i></li>
+              <li><i class="bi bi-instagram p-2"> instagram  </i></li>
+              <li><i class="bi bi-twitter p-2"> twitter </i></li> 
+          </ul> 
+        </div>
+
+        <div class="col-lg-3 p-3">
+          <p>
+            © B store Official 2023 
+          </p> 
+        </div>
+
+      </div> 
+    </div>  
+  </div> 
+
+   <!-- footer end -->
+
+
+
+    
+
+    
+
+      
+
+   
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
